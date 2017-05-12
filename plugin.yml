@@ -1,0 +1,37 @@
+main: mx.x10.gamedomain.blockhunt.BlockHunt
+version: 1.0B
+name: BlockHunt
+
+commands: 
+ blockhunt:
+  description: Block hunt command
+  usage: /blockhunt <action>
+  aliases: [bc, bhc, bh]
+permissions:
+ blockhunt.*:
+  description: Gives access to all hungry hub commands
+  children:
+   blockhunt.bhc: true
+   blockhunt.reload: true
+   blockhunt.sethub: true
+   blockhunt.join: true
+   blockhunt.leave: true
+   blockhunt.setlworld: true
+ blockhunt.bhc:
+  description: Permission to use the blockhunt command
+  default: true
+ blockhunt.reload:
+  description: /bh reload permissions
+  default: op
+ blockhunt.sethub:
+  description: Allows /bh sethub
+  default: op
+ blockhunt.join:
+  description: Allows /bh join
+  default: true
+ blockhunt.leave:
+  description: Allows /bh leave
+  default: true
+ blockhunt.setlworld:
+  description: Allows /bh setlworld
+  default: op
